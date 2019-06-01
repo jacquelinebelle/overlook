@@ -1,59 +1,104 @@
-{
-  bookings: [
-    {
-    userID: 78,
+const bookings = [
+  {
+    userID: 1,
     date: "21/08/2019",
-    roomNumber: 143
-    },
-    {
-    userID: 43,
-    date: "05/10/2019",
-    roomNumber: 108
-    },
-    {
+    roomNumber: 1
+  },
+  {
+    userID: 2,
+    date: "22/08/2019",
+    roomNumber: 2
+  },
+  {
+    userID: 3,
+    date: "22/08/2019",
+    roomNumber: 3
+  },
+  {
+    userID: 4,
+    date: "23/08/2019",
+    roomNumber: 4
+  },
+  {
     userID: 5,
-    date: "31/08/2019",
+    date: "23/08/2019",
+    roomNumber: 5
+  },
+  {
+    userID: 6,
+    date: "24/08/2019",
+    roomNumber: 6
+  },
+  {
+    userID: 7,
+    date: "24/08/2019",
+    roomNumber: 7
+  },
+  {
+    userID: 8,
+    date: "25/08/2019",
     roomNumber: 8
-    },
-    {
+  },
+  {
+    userID: 9,
+    date: "25/08/2019",
+    roomNumber: 9
+  },
+  {
+    userID: 10,
+    date: "26/08/2019",
+    roomNumber: 10
+  },
+  {
+    userID: 11,
+    date: "27/08/2019",
+    roomNumber: 11
+  },
+  {
+    userID: 12,
+    date: "27/08/2019",
+    roomNumber: 12
+  },
+  {
+    userID: 13,
+    date: "28/09/2019",
+    roomNumber: 13
+  },
+  {
     userID: 14,
-    date: "17/07/2019",
-    roomNumber: 192
-    },
-    {
-    userID: 83,
-    date: "15/01/2020",
-    roomNumber: 118
-    },
-    {
-    userID: 61,
-    date: "07/02/2020",
-    roomNumber: 158
-    },
-    {
-    userID: 31,
-    date: "22/02/2020",
-    roomNumber: 73
-    },
-    {
-    userID: 34,
-    date: "21/10/2019",
-    roomNumber: 97
-    },
-    {
-    userID: 62,
-    date: "07/10/2019",
-    roomNumber: 51
-    },
-    {
-    userID: 74,
-    date: "18/07/2019",
-    roomNumber: 123
-    },
-    {
-    userID: 88,
-    date: "17/11/2019",
-    roomNumber: 99
-    }
-  ]
-}
+    date: "27/08/2019",
+    roomNumber: 14
+  },
+  {
+    userID: 15,
+    date: "24/08/2019",
+    roomNumber: 15
+  },
+  {
+    userID: 16,
+    date: "25/08/2019",
+    roomNumber: 16
+  },
+  {
+    userID: 17,
+    date: "25/08/2019",
+    roomNumber: 17
+  },
+  {
+    userID: 18,
+    date: "26/08/2019",
+    roomNumber: 18
+  },
+  {
+    userID: 19,
+    date: "21/08/2019",
+    roomNumber: 19
+  },
+  {
+    userID: 20,
+    date: "21/08/2019",
+    roomNumber: 20
+  }
+];
+
+export default bookings
