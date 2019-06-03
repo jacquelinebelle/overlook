@@ -4,6 +4,36 @@
     <title>Overlook</title>
   </head>
   <body>
-    
+    <div class="dim"></div>
+    <section class="welcome">
+      <h2>Welcome to Overlook</h2>
+      <button class="welcome-button">Thanks</button>
+    </section>
+    <header>
+      <h1>Overlook</h1>
+    </header>
+    <main class="hidden">
+      <ul class="tabs">
+        <li class="tab tab-0 shown" data-tab="main">Main</li>
+        <li class="tab tab-1" data-tab="orders">Orders</li>
+        <li class="tab tab-2" data-tab="rooms">Rooms</li>
+        <li class="tab tab-3" data-tab="customers">Customers</li>
+      </ul>
+      <article id="main" class="tab-content shown">
+        <p>Today's date is <span id="date"></span></p>
+        <p>Total rooms available today: <span id="roomsAvailable"></span></p>
+        <p>Today's earnings amount to: <span id="earnings"></span></p>
+        <p>Rooms occupied: <span id="occupiedRooms"></span></p>
+      </article>
+      <article id="orders" class="tab-content">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </article>
+      <article id="rooms" class="tab-content">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </article>
+      <article id="customers" class="tab-content">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </article>
+    </main>
   </body>
 </html>

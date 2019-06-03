@@ -1,6 +1,6 @@
 class RoomType extends Booking {
-  constructor(bookingsData, date, roomsData) {
-    super(bookingsData, date);
+  constructor(date, bookingsData, roomsData) {
+    super(date, bookingsData);
     this.roomsData = roomsData;
   }
 }

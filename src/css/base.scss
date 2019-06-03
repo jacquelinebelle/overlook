@@ -1,6 +1,83 @@
 /* This is an example of using Sass, otherwise plain CSS works too*/
-$primary-background: pink;
+$primary-background: white;
+$secondary-color: lightgray;
+$accent-color: pink;
+
+* {
+  box-sizing: border-box;
+}
+
+.dim {
+  background-color: $secondary-color;
+  height: 100%;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.welcome {
+  background-color: $primary-background;
+  bottom: 0;
+  height: 422px;
+  left: 0;
+  margin: auto;
+  padding: 100px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top:0;
+  width: 900px;
+}
 
 body {
   background-color: $primary-background;
+}
+
+header {
+  text-align: center;
+}
+
+main {
+  margin: auto;
+  width: 80%;
+}
+
+.tabs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style: none;
+  margin: 0;
+}
+
+.tab {
+  cursor: pointer;
+}
+
+.tab:hover {
+  color: $accent-color;
+}
+
+.tab, article {
+  padding: 15px;
+}
+
+.shown {
+  background-color: $secondary-color;
+}
+
+.tab-content{
+  display: none;
+  background: $secondary-color;
+}
+
+.tab-content.shown{
+  display: inherit;
+}
+
+.hidden {
+  display: none;
 }
