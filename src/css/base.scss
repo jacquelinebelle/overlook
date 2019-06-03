@@ -3,6 +3,35 @@ $primary-background: white;
 $secondary-color: lightgray;
 $accent-color: pink;
 
+* {
+  box-sizing: border-box;
+}
+
+.dim {
+  background-color: $secondary-color;
+  height: 100%;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.welcome {
+  background-color: $primary-background;
+  bottom: 0;
+  height: 422px;
+  left: 0;
+  margin: auto;
+  padding: 100px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top:0;
+  width: 900px;
+}
+
 body {
   background-color: $primary-background;
 }
@@ -49,6 +78,6 @@ main {
   display: inherit;
 }
 
-// .hidden {
-//   display: none;
-// }
+.hidden {
+  display: none;
+}

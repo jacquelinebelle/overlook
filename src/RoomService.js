@@ -1,7 +1,7 @@
-class RoomService {
-  constructor(roomServiceData, date) {
+class RoomService extends Today {
+  constructor(date, roomServiceData) {
+    super(date);
     roomServiceData = roomServiceData;
-    date = date;
   }
 }
 

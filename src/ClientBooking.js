@@ -1,6 +1,6 @@
 class ClientBooking extends Booking {
-  constructor(bookingData, date, customerId) {
-    super(bookingData, date);
+  constructor(date, bookingData, customerId) {
+    super(date, bookingData);
     this.customerID = customerId;
   }
 
