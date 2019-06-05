@@ -18,7 +18,6 @@ class Customer {
     const newCustomer = { id: newId, name: name };
     this.customerData.users.push(newCustomer);
     domUpdates.selectCustomer(newCustomer);
-    // domUpdates.displaySelectedCustomer(); 
     return newCustomer;
   }
 }

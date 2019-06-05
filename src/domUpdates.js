@@ -1,5 +1,4 @@
 import $ from 'jquery';
-// import Hotel from './Hotel';
 
 export default {
   displayDate(today) {
@@ -57,18 +56,13 @@ export default {
   },
 
   hideGenericInfo() {
-    // $('.customer-order-history').removeClass('hidden');
     $('.order-date').addClass('hidden');
     $('.room-service-orders').html('');
     $('.general-booking').addClass('hidden');
     $('.customer-booking-history').removeClass('hidden');
-    // $('#rooms div').html('');
   },
 
   displayCustomerOrderHistory(orderHistory) {
-    console.log(orderHistory.checkForCustomerHistory())
-    console.log(orderHistory.getCustomerOrderHistory())
-
     $('.order').remove();
     $('.customer-order-history').append('<h6 class="order">Customer order history:</h6>');
     if (orderHistory.checkForCustomerHistory()) {
@@ -94,13 +88,7 @@ export default {
     });
   },
 
-  // hideRooms() {
-  //   $('#rooms div').html('');
-  // },
-
   displayCustomerBookingHistory(clientBooking) {
-    // $('.general-booking-info').addClass('hidden');
-    // $('.customer-booking-history').removeClass('hidden');
     $('.customer-booking-info').append(`<h6 class="current-booking">Booking for today:</h6>`)
     if (clientBooking.findCurrentBooking()) {
       $('.customer-booking-info').append(`<p class="current-booking current-booking-info">${clientBooking.findCurrentBooking().date}: Room ${clientBooking.findCurrentBooking().roomNumber}</p>`)
@@ -163,7 +151,6 @@ export default {
 
   hideBookingProcess() {
     $('.current-booking, .booking-history').remove();
-    // $('.booking-history').remove();
     $('.customer-booking-history, .customer-booking-info').removeClass('hidden');
     $('.dropdown').addClass('hidden');
     $('.room-info').remove();
