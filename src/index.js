@@ -11,9 +11,6 @@ import Customer from './Customer';
 import OrderHistory from './OrderHistory';
 import ClientBooking from './ClientBooking';
 
-// An example of how you tell webpack to use an image (also need to link to it in the index.html)
-// import './images/turing-logo.png'
-
 let customer;
 let customerData;
 fetch("https://fe-apps.herokuapp.com/api/v1/overlook/1903/users/users")

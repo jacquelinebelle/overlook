@@ -16,7 +16,6 @@ describe('ClientBooking', function() {
     expect(clientBooking.date).to.equal(mockDate);
     expect(clientBooking.bookingData).to.deep.equal(bookingData);
     expect(clientBooking.customerID).to.equal(11);
-    // expect(clientBooking.roomsData).to.deep.equal(roomData);
   });
 
   it('should find customer booking history', function() {
