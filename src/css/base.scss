@@ -2,9 +2,16 @@
 $primary-background: white;
 $secondary-color: lightgray;
 $accent-color: pink;
+$body-font: 'Roboto';
+$heading-font: 'Playfair Display';
 
 * {
   box-sizing: border-box;
+}
+
+body {
+  background-color: $primary-background;
+  font-family: $body-font;
 }
 
 .dim {
@@ -21,6 +28,7 @@ $accent-color: pink;
 .welcome {
   background-color: $primary-background;
   bottom: 0;
+  font-family: $heading-font;
   height: 422px;
   left: 0;
   margin: auto;
@@ -32,12 +40,31 @@ $accent-color: pink;
   width: 900px;
 }
 
-body {
-  background-color: $primary-background;
+button, input {
+  border-radius: 5px;
+  height: 25px;
+  width: 150px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+input {
+  padding-left: 10px;
 }
 
 header {
-  text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+h1, li, h6, label {
+  font-family: $heading-font;
+}
+
+h6 {
+  font-size: 16px;
 }
 
 main {
@@ -53,12 +80,9 @@ main {
   margin: 0;
 }
 
-.tab {
-  cursor: pointer;
-}
-
 .tab:hover {
   color: $accent-color;
+  cursor: pointer;
 }
 
 .tab, article {
@@ -76,6 +100,67 @@ main {
 
 .tab-content.shown{
   display: inherit;
+}
+
+.tab-content h6 {
+  margin: 10px 0;
+}
+
+.customer-forms * {
+  margin: 5px;
+}
+
+.customer-labels {
+  display: block;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: $primary-background;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: $accent-color;
+  cursor: pointer;
+}
+
+.room-info, 
+.customer-order-history p, 
+.customer-booking-info p,
+.general-booking-info p,
+.customer-booking-history p,
+.menu p {
+  background-color: white;
+  margin: 10px 0;
+  padding: 10px 20px;
+}
+
+.room-info:hover,
+.food:hover {
+  background-color: $accent-color;
+  cursor: pointer;
+}
+
+.menu {
+  text-align: center;
 }
 
 .hidden {

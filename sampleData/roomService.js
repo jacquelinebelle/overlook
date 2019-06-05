@@ -1,4 +1,5 @@
-const roomServices = [
+const roomService = {
+  roomServices: [
   {
     userID: 1,
     date: "21/08/2019",
@@ -66,6 +67,12 @@ const roomServices = [
     totalCost: 21.6
   },
   {
+    userID: 11,
+    date: "28/08/2019",
+    food: "Good Food",
+    totalCost: 100.50
+  },
+  {
     userID: 12,
     date: "27/08/2019",
     food: "Intelligent Metal Sandwich",
@@ -119,6 +126,7 @@ const roomServices = [
     food: "Rustic Frozen Sandwich",
     totalCost: 17.26
   }
-];
+]
+}
 
-export default roomServices;
+export default roomService;

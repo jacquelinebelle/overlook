@@ -14,7 +14,7 @@ class Today {
     if (mm < 10) {
       mm = `0${mm}`;
     }
-    this.date = `${mm}/${dd}/${yyyy}`;
+    this.date = `${dd}/${mm}/${yyyy}`;
   }
 }
 

@@ -2,15 +2,18 @@
 <html lang="en-US">
   <head>
     <title>Overlook</title>
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Roboto:300,400,500&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="dim"></div>
     <section class="welcome">
       <h2>Welcome to Overlook</h2>
-      <button class="welcome-button">Thanks</button>
+      <button id="welcome-btn">Thanks</button>
     </section>
     <header>
+      <h6 class="hidden selected-customer customer-name"></h6>
       <h1>Overlook</h1>
+      <h6 class="hidden selected-customer customer-id"></h6>
     </header>
     <main class="hidden">
       <ul class="tabs">
@@ -20,19 +23,66 @@
         <li class="tab tab-3" data-tab="customers">Customers</li>
       </ul>
       <article id="main" class="tab-content shown">
-        <p>Today's date is <span id="date"></span></p>
-        <p>Total rooms available today: <span id="roomsAvailable"></span></p>
-        <p>Today's earnings amount to: <span id="earnings"></span></p>
-        <p>Rooms occupied: <span id="occupiedRooms"></span></p>
+        <div>
+          <h6>Today's date is <span id="date"></span>.</h6>
+          <p>Total rooms available today: <span id="roomsAvailable"></span></p>
+          <p>Today's earnings amount to: $<span id="earnings"></span></p>
+          <p>Rooms occupied: <span id="occupiedRooms"></span>%</p>
+        </div>
       </article>
       <article id="orders" class="tab-content">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        <div>
+          <label class="order-date" for="choose-order-date">See orders for date:</label>
+          <input class="order-date" type="date" id="choose-order-date"
+          value="2019-06-05"
+          min="2019-06-01" max="2025-12-31">
+          <button class="order-date" id="choose-order-date-btn">Select date</button>
+          <div class="room-service-orders"></div>
+          <div class="customer-order-history"></div>
+        </div>
       </article>
       <article id="rooms" class="tab-content">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        <div>
+          <label class="booking-date general-booking" for="choose-booking-date">See available rooms for date:</label>
+          <input class="booking-date general-booking" type="date" id="choose-booking-date"
+          value="2019-06-05"
+          min="2019-06-01" max="2025-12-31">
+          <button class="booking-date general-booking" id="choose-booking-date-btn">Select date</button>
+          <div class="general-booking general-booking-info"></div>
+          <div class="customer-booking-info"></div>
+          <button id="add-service-btn" class="hidden">Add room service</button>
+          <div class="menu hidden"></div>
+          <button id="book-room-btn" class="hidden">Book a room</button>
+          <div class="dropdown hidden">
+            <button class="dropdown-btn">Filter by room type</button>
+            <div class="dropdown-content">
+              <a class="room-type" id="single-room">single room</a>
+              <a class="room-type" id="junior-suite">junior suite</a>
+              <a class="room-type" id="residential-suite">residential suite</a>
+              <a class="room-type" id="suite">Suite</a>
+            </div>
+          </div>
+          <div class="filtered-rooms"></div>
+          <div class="customer-booking-history hidden"></div>
+        </div>
       </article>
       <article id="customers" class="tab-content">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        <div>
+          <form class="customer-forms" id="search-form">
+            <label class="customer-labels" for="search-customer-input">Search for a customer:</label>
+            <input class="customer-inputs" type="text" name="search-customer-input" id="search-customer-input" placeholder="Enter Name">
+            <button class="customer-btns" id="search-customer-btn">Search</button>
+          </form>
+          <p class="search-results hidden">Would you like to open <span class="customer-name"></span>'s account?</p>
+          <p class="hidden customer-not-found">User does not exist.</p>
+          <button class="hidden" id="select-customer-btn">Select customer</button>
+          <button class="hidden" id="error-btn">Oh no</button>
+          <form class="customer-forms" id="create-form">
+            <label class="customer-labels" for="create-input">Create a customer:</label>
+            <input class="customer-inputs" type="text" name="create-input" id="create-input" placeholder="Enter Name">
+            <button class="customer-btns" id="create-btn">Create</button> 
+          </form>
+        </div>
       </article>
     </main>
   </body>
